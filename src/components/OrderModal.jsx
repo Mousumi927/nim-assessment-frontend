@@ -19,9 +19,15 @@ function OrderModal({ order, setOrderModal }) {
         items: order
       })
     });
-    const data = await response.json();
-    console.log(data);
+
+    alert("response ", response);
+    if (response.status === 200) {
+      // const data = await response.json();
+      // const orderId = data.orderId;
+      // history.push(`/order-confirmation/${orderId}`); // Navigate to the order confirmation page
+    }
   };
+
   return (
     <>
       <div
